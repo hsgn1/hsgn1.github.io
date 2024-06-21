@@ -65,10 +65,10 @@ disqus: # fromendworld
 
 # Gitalk
 gitalk:
-  clientID: 
-  clientSecret: 
-  repo: 
-  owner: 
+  clientID: Ov23ctpClcl2kwmGOX4q
+  clientSecret: 6da7e2e039753fe3dafe0ed4a3f152f01e571651
+  repo: hsgn1.github.io
+  owner: hsgn1
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 # google_analytics: 
