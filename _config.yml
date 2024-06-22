@@ -57,7 +57,7 @@ footer-links:
   youtube:
 
 # Text under the icons in footer
-footer-text: Copyright (c) 2023 Arnold
+footer-text: Copyright (c) 2024 红色工农
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -66,7 +66,7 @@ disqus: # fromendworld
 # Gitalk
 gitalk:
   clientID: Ov23ctpClcl2kwmGOX4q
-  clientSecret: 6da7e2e039753fe3dafe0ed4a3f152f01e571651
+  clientSecret: 1b456e654bf8ca0ab35ebf01b3058ff45dc00794
   repo: hsgn1.github.io
   owner: hsgn1
 
