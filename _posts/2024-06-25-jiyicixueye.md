@@ -17,7 +17,7 @@ toc: true
 
 &emsp;&emsp;我继续走着，看到了几位清洁工在大路上铲雪，我突然想起来大雪好像是会给车辆的运行惹麻烦的。我继续观察那群清洁工，天很冷，他们的脸冻得红红的，帽子上也有这几片雪花，我打算问问他们关于今天晚上怎么铲雪的事，但又有点害羞，不敢去问。   
 
-[![图源网络，与本文内容无关](1 "图源网络，与本文内容无关")](https://raw.githubusercontent.com/hsgn1/hsgn1.github.io/master/images/202406/mmexport1719278885045.png "图源网络，与本文内容无关")   
+![test](https://raw.githubusercontent.com/hsgn1/hsgn1.github.io/master/images/202406/mmexport1719278885045.png "图源网络")
 
 &emsp;&emsp;然后我就继续听他们的对话，    
 
