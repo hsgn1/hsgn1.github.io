@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "记一次雪夜"
-date:   2024-06-25
+title: "最后的秋天"
+date:   2024-05-10
 tags: [红色工农]
 comments: true
 author: 新风
