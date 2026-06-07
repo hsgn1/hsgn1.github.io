@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>东营元锡工贸有限公司 - 颜料、助剂专业研发生产</title>
     <meta name="keywords" content="东营元锡工贸,颜料,颜料助剂,颜料研发,助剂生产">
     <meta name="description" content="东营元锡工贸有限公司专注于颜料、颜料助剂的研发、生产与销售，品质可靠，服务全国客户。">
@@ -17,12 +17,19 @@
             color: #333;
             line-height: 1.6;
             background-color: #f8f9fa;
+            font-size: 16px;
         }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+
         /* 头部导航 */
         .header {
             background: #1a365d;
             color: #fff;
-            padding: 0 20px;
             position: sticky;
             top: 0;
             z-index: 999;
@@ -35,72 +42,98 @@
             justify-content: space-between;
             align-items: center;
             height: 70px;
+            padding: 0 15px;
         }
         .logo {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
         }
+        /* 桌面端导航 */
         .nav-list {
             display: flex;
-            list-style: none;
         }
         .nav-list li {
-            margin-left: 40px;
+            margin-left: 35px;
         }
         .nav-list a {
             color: #fff;
-            text-decoration: none;
             font-size: 16px;
             transition: color 0.3s;
+            padding: 8px 0;
         }
         .nav-list a:hover {
             color: #ffc107;
         }
+        /* 移动端菜单按钮 */
+        .menu-btn {
+            display: none;
+            width: 36px;
+            height: 36px;
+            position: relative;
+            cursor: pointer;
+        }
+        .menu-btn span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            transition: 0.3s;
+        }
+        .menu-btn span:nth-child(1) { top: 8px; }
+        .menu-btn span:nth-child(2) { top: 16px; }
+        .menu-btn span:nth-child(3) { top: 24px; }
+
         /* 轮播横幅 */
         .banner {
-            height: 450px;
-            background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.7)), url('https://img0.baidu.com/it/u=2878922323,2679629239&fm=253&fmt=auto&app=138&f=JPEG?w=1200&h=500') center/cover no-repeat;
+            height: 380px;
+            background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.7)), 
+            url('https://img0.baidu.com/it/u=2878922323,2679629239&fm=253&fmt=auto&app=138&f=JPEG?w=1200&h=500') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color: #fff;
             text-align: center;
-            padding: 0 20px;
+            padding: 0 15px;
         }
         .banner h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
+            font-size: 34px;
+            margin-bottom: 15px;
         }
         .banner p {
-            font-size: 20px;
+            font-size: 18px;
             max-width: 800px;
         }
+
         /* 通用容器 */
         .container {
             max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 20px;
+            margin: 60px auto;
+            padding: 0 15px;
         }
         .title {
             text-align: center;
-            font-size: 32px;
+            font-size: 28px;
             color: #1a365d;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             position: relative;
         }
         .title::after {
             content: '';
             display: block;
-            width: 80px;
+            width: 70px;
             height: 3px;
             background: #ffc107;
-            margin: 15px auto;
+            margin: 12px auto;
         }
+
         /* 公司简介 */
         .about {
             display: flex;
-            gap: 50px;
+            gap: 40px;
             align-items: center;
         }
         .about-text {
@@ -109,9 +142,9 @@
             color: #555;
         }
         .about-text h3 {
-            font-size: 22px;
+            font-size: 20px;
             color: #1a365d;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .about-img {
             flex: 1;
@@ -121,11 +154,12 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
+
         /* 产品中心 */
         .product-wrap {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            gap: 25px;
         }
         .product-item {
             background: #fff;
@@ -135,30 +169,31 @@
             transition: transform 0.3s;
         }
         .product-item:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
         }
         .product-img img {
             width: 100%;
-            height: 220px;
+            height: 200px;
             object-fit: cover;
         }
         .product-info {
-            padding: 20px;
+            padding: 18px;
             text-align: center;
         }
         .product-info h4 {
-            font-size: 18px;
+            font-size: 17px;
             color: #1a365d;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .product-info p {
             color: #666;
             font-size: 14px;
         }
+
         /* 核心优势 */
         .advantage {
             background: #1a365d;
-            padding: 80px 0;
+            padding: 60px 0;
             color: #fff;
         }
         .advantage .title {
@@ -167,23 +202,24 @@
         .advantage-wrap {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            gap: 25px;
             text-align: center;
         }
         .advantage-item h4 {
-            font-size: 20px;
-            margin: 20px 0 10px;
+            font-size: 19px;
+            margin: 15px 0 8px;
         }
         .advantage-item p {
             opacity: 0.8;
             font-size: 14px;
         }
+
         /* 联系我们 */
         .contact-wrap {
             display: flex;
-            gap: 50px;
+            gap: 40px;
             background: #fff;
-            padding: 40px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.08);
         }
@@ -191,55 +227,120 @@
             flex: 1;
         }
         .contact-left h3 {
-            font-size: 22px;
+            font-size: 20px;
             color: #1a365d;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         .contact-list p {
-            margin: 15px 0;
+            margin: 12px 0;
             font-size: 16px;
         }
         .contact-right {
             flex: 1;
         }
+
         /* 页脚 */
         .footer {
             background: #0f213b;
             color: #ccc;
             text-align: center;
-            padding: 30px 0;
-            margin-top: 50px;
+            padding: 25px 15px;
+            margin-top: 40px;
         }
         .footer p {
             font-size: 14px;
+            line-height: 1.8;
         }
-        /* 响应式适配 */
-        @media (max-width: 992px) {
-            .about, .contact-wrap {
+
+        /* ========== 移动端适配 768px 以下 ========== */
+        @media (max-width: 768px) {
+            /* 导航改为汉堡菜单 */
+            .menu-btn {
+                display: block;
+            }
+            .nav-list {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #1a365d;
                 flex-direction: column;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
             }
-            .product-wrap {
-                grid-template-columns: repeat(2, 1fr);
+            .nav-list.active {
+                max-height: 300px;
             }
-            .advantage-wrap {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .banner h1 {
-                font-size: 32px;
-            }
-        }
-        @media (max-width: 576px) {
             .nav-list li {
-                margin-left: 15px;
+                margin: 0;
+                text-align: center;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
             }
-            .product-wrap {
-                grid-template-columns: 1fr;
+            .nav-list a {
+                display: block;
+                padding: 14px 0;
+                font-size: 17px;
             }
+
+            /* 横幅 */
             .banner {
-                height: 320px;
+                height: 280px;
             }
             .banner h1 {
                 font-size: 26px;
+            }
+            .banner p {
+                font-size: 16px;
+            }
+
+            /* 简介、联系 纵向排列 */
+            .about, .contact-wrap {
+                flex-direction: column;
+            }
+            .about {
+                gap: 25px;
+            }
+
+            /* 产品两列 */
+            .product-wrap {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            /* 优势两列 */
+            .advantage-wrap {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .container {
+                margin: 40px auto;
+            }
+            .title {
+                font-size: 24px;
+            }
+        }
+
+        /* ========== 小屏手机 480px 以下 ========== */
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 18px;
+            }
+            /* 产品单列 */
+            .product-wrap {
+                grid-template-columns: 1fr;
+            }
+            /* 优势单列 */
+            .advantage-wrap {
+                grid-template-columns: 1fr;
+            }
+            .contact-wrap {
+                padding: 20px 15px;
+            }
+            .product-img img {
+                height: 180px;
             }
         }
     </style>
@@ -249,7 +350,14 @@
     <header class="header">
         <div class="nav-container">
             <div class="logo">东营元锡工贸有限公司</div>
-            <ul class="nav-list">
+            <!-- 汉堡按钮 -->
+            <div class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- 导航菜单 -->
+            <ul class="nav-list" id="navList">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">关于我们</a></li>
                 <li><a href="#product">产品中心</a></li>
@@ -262,7 +370,7 @@
     <!-- 首页横幅 -->
     <section class="banner" id="home">
         <h1>专注颜料与助剂 研发生产一体化</h1>
-        <p>东营元锡工贸有限公司 | 匠心制造，品质为先，助力化工行业发展</p>
+        <p>东营元锡工贸有限公司 | 匠心制造，品质为先</p>
     </section>
 
     <!-- 关于我们 -->
@@ -396,5 +504,22 @@
     <footer class="footer">
         <p>© 2025 东营元锡工贸有限公司 版权所有 | 专业颜料、助剂研发生产企业</p>
     </footer>
+
+    <!-- 移动端菜单交互 JS -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navList = document.getElementById('navList');
+        // 点击展开/收起菜单
+        menuBtn.addEventListener('click', function(){
+            navList.classList.toggle('active');
+        });
+        // 点击导航链接自动关闭菜单
+        const navLinks = navList.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(){
+                navList.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
