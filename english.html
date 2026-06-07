@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dongying Erya Technology Co., Ltd. - Professional Pigments & Additives R&D and Production</title>
+    <meta name="keywords" content="Dongying Erya Technology, Pigments, Pigment Additives, Pigment R&D, Additives Production">
+    <meta name="description" content="Dongying Erya Technology Co., Ltd. specializes in the R&D, production and sales of pigments and pigment additives with reliable quality and nationwide service.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", Arial, sans-serif;
+        }
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            font-size: 16px;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        /* 头部导航 */
+        .header {
+            background: #1a365d;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            padding: 0 15px;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /* 桌面端导航 */
+        .nav-list {
+            display: flex;
+        }
+        .nav-list li {
+            margin-left: 35px;
+        }
+        .nav-list a {
+            color: #fff;
+            font-size: 16px;
+            transition: color 0.3s;
+            padding: 8px 0;
+        }
+        .nav-list a:hover {
+            color: #ffc107;
+        }
+        /* 移动端菜单按钮 */
+        .menu-btn {
+            display: none;
+            width: 36px;
+            height: 36px;
+            position: relative;
+            cursor: pointer;
+        }
+        .menu-btn span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            transition: 0.3s;
+        }
+        .menu-btn span:nth-child(1) { top: 8px; }
+        .menu-btn span:nth-child(2) { top: 16px; }
+        .menu-btn span:nth-child(3) { top: 24px; }
+        /* 轮播横幅 */
+        .banner {
+            height: 380px;
+            background: linear-gradient(rgba(26, 54, 93, 0.7), rgba(26, 54, 93, 0.7)), 
+            url('https://img0.baidu.com/it/u=2878922323,2679629239&fm=253&fmt=auto&app=138&f=JPEG?w=1200&h=500') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 0 15px;
+        }
+        .banner h1 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+        .banner p {
+            font-size: 18px;
+            max-width: 800px;
+        }
+        /* 通用容器 */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 15px;
+        }
+        .title {
+            text-align: center;
+            font-size: 28px;
+            color: #1a365d;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: #ffc107;
+            margin: 12px auto;
+        }
+        /* 公司简介 */
+        .about {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .about-text {
+            flex: 1;
+            font-size: 16px;
+            color: #555;
+        }
+        .about-text h3 {
+            font-size: 20px;
+            color: #1a365d;
+            margin-bottom: 15px;
+        }
+        .about-img {
+            flex: 1;
+        }
+        .about-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        /* 产品中心 */
+        .product-wrap {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .product-item {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        .product-item:hover {
+            transform: translateY(-6px);
+        }
+        .product-img img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 18px;
+            text-align: center;
+        }
+        .product-info h4 {
+            font-size: 17px;
+            color: #1a365d;
+            margin-bottom: 8px;
+        }
+        .product-info p {
+            color: #666;
+            font-size: 14px;
+        }
+        /* 核心优势 */
+        .advantage {
+            background: #1a365d;
+            padding: 60px 0;
+            color: #fff;
+        }
+        .advantage .title {
+            color: #fff;
+        }
+        .advantage-wrap {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            text-align: center;
+        }
+        .advantage-item h4 {
+            font-size: 19px;
+            margin: 15px 0 8px;
+        }
+        .advantage-item p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        /* 联系我们 */
+        .contact-wrap {
+            display: flex;
+            gap: 40px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        .contact-left {
+            flex: 1;
+        }
+        .contact-left h3 {
+            font-size: 20px;
+            color: #1a365d;
+            margin-bottom: 20px;
+        }
+        .contact-list p {
+            margin: 12px 0;
+            font-size: 16px;
+        }
+        .contact-right {
+            flex: 1;
+        }
+        /* 页脚 */
+        .footer {
+            background: #0f213b;
+            color: #ccc;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 40px;
+        }
+        .footer p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        /* ========== 移动端适配 768px 以下 ========== */
+        @media (max-width: 768px) {
+            /* 导航改为汉堡菜单 */
+            .menu-btn {
+                display: block;
+            }
+            .nav-list {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #1a365d;
+                flex-direction: column;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease;
+            }
+            .nav-list.active {
+                max-height: 300px;
+            }
+            .nav-list li {
+                margin: 0;
+                text-align: center;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            .nav-list a {
+                display: block;
+                padding: 14px 0;
+                font-size: 17px;
+            }
+            /* 横幅 */
+            .banner {
+                height: 280px;
+            }
+            .banner h1 {
+                font-size: 26px;
+            }
+            .banner p {
+                font-size: 16px;
+            }
+            /* 简介、联系 纵向排列 */
+            .about, .contact-wrap {
+                flex-direction: column;
+            }
+            .about {
+                gap: 25px;
+            }
+            /* 产品两列 */
+            .product-wrap {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            /* 优势两列 */
+            .advantage-wrap {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .container {
+                margin: 40px auto;
+            }
+            .title {
+                font-size: 24px;
+            }
+        }
+        /* ========== 小屏手机 480px 以下 ========== */
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 18px;
+            }
+            /* 产品单列 */
+            .product-wrap {
+                grid-template-columns: 1fr;
+            }
+            /* 优势单列 */
+            .advantage-wrap {
+                grid-template-columns: 1fr;
+            }
+            .contact-wrap {
+                padding: 20px 15px;
+            }
+            .product-img img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Dongying Erya Technology Co., Ltd.</div>
+            <!-- 汉堡按钮 -->
+            <div class="menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- 导航菜单 -->
+            <ul class="nav-list" id="navList">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#product">Products</a></li>
+                <li><a href="#advantage">Advantages</a></li>
+                <li><a href="#contact">Contact</a></li>
+	            <li><a href="https://edilix.eu.org/index.html">中文</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- 首页横幅 -->
+    <section class="banner" id="home">
+        <h1>Integrated R&D & Production of Pigments & Additives</h1>
+        <p>Dongying Erya Technology Co., Ltd. | Craftsmanship & Quality First</p>
+    </section>
+    <!-- 关于我们 -->
+    <section class="container" id="about">
+        <h2 class="title">About Us</h2>
+        <div class="about">
+            <div class="about-text">
+                <h3>Company Profile</h3>
+                <p>Located in Dongying, Shandong Province, Dongying Erya Technology Co., Ltd. is a modern enterprise integrating R&D, production and sales of pigments and pigment additives. We have a professional R&D team, standardized production workshops and a complete quality inspection system.</p>
+                <br>
+                <p>For many years, we have focused on the pigment and additive industry, adhering to technological innovation and strict quality control. Our products are widely used in coatings, inks, plastics, rubber, building materials and other fields. Following the principle of integrity management, we have gained recognition from customers at home and abroad with stable quality, reasonable prices and considerate service.</p>
+                <br>
+                <p>In the future, we will continue to increase R&D investment and optimize product performance, striving to become a reliable supplier of pigments and additives in the industry.</p>
+            </div>
+            <div class="about-img">
+                <img src="https://img2.baidu.com/it/u=1963329621,1821696338&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" alt="Company Factory">
+            </div>
+        </div>
+    </section>
+    <!-- 产品中心 -->
+    <section class="container" id="product">
+        <h2 class="title">Products</h2>
+        <div class="product-wrap">
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="https://img1.baidu.com/it/u=3077362939,2227011166&fm=253&fmt=auto&app=138&f=JPEG?w=600&h=400" alt="Inorganic Pigments">
+                </div>
+                <div class="product-info">
+                    <h4>Inorganic Pigments</h4>
+                    <p>Good weather resistance and high tinting strength, suitable for coatings, plastics and building materials</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="https://img0.baidu.com/it/u=1773613222,1210209921&fm=253&fmt=auto&app=138&f=JPEG?w=600&h=400" alt="Organic Pigments">
+                </div>
+                <div class="product-info">
+                    <h4>Organic Pigments</h4>
+                    <p>Bright colors and complete color spectrum, eco-friendly and non-toxic, ideal for inks and high-end coatings</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="https://img2.baidu.com/it/u=2778192994,1572423214&fm=253&fmt=auto&app=138&f=JPEG?w=600&h=400" alt="Dispersing Additives">
+                </div>
+                <div class="product-info">
+                    <h4>Pigment Dispersing Additives</h4>
+                    <p>Improve pigment dispersion, prevent flocculation, enhance product stability and gloss</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="https://img0.baidu.com/it/u=2069329223,1149922964&fm=253&fmt=auto&app=138&f=JPEG?w=600&h=400" alt="Wetting & Leveling Additives">
+                </div>
+                <div class="product-info">
+                    <h4>Wetting & Leveling Additives</h4>
+                    <p>Optimize wetting effect, eliminate craters and pinholes, improve construction performance</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="https://img1.baidu.com/it/u=1292353144,3769054121&fm=253&fmt=auto&app=138&f=JPEG?w=600&h=400" alt="Defoamer Additives">
+                </div>
+                <div class="product-info">
+                    <h4>Defoamer Additives</h4>
+                    <p>Efficient foam suppression and defoaming, good compatibility without affecting original system performance</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-img">
+                    <img src="https://img2.baidu.com/it/u=3802003413,2829626135&fm=253&fmt=auto&app=138&f=JPEG?w=600&h=400" alt="Custom Products">
+                </div>
+                <div class="product-info">
+                    <h4>Custom Pigments & Additives</h4>
+                    <p>Exclusive R&D and customization according to customer working conditions and formula requirements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 核心优势 -->
+    <section class="advantage" id="advantage">
+        <div class="container">
+            <h2 class="title">Our Advantages</h2>
+            <div class="advantage-wrap">
+                <div class="advantage-item">
+                    <h4>Professional R&D</h4>
+                    <p>Senior chemical R&D team, continuous technology upgrading and formula optimization</p>
+                </div>
+                <div class="advantage-item">
+                    <h4>Standard Production</h4>
+                    <p>Automatic production lines, strict process flow and stable bulk supply</p>
+                </div>
+                <div class="advantage-item">
+                    <h4>Quality Inspection</h4>
+                    <p>Full-process quality control, multiple tests for each batch to guarantee stable quality</p>
+                </div>
+                <div class="advantage-item">
+                    <h4>Thoughtful Service</h4>
+                    <p>Pre-sales technical consultation and full after-sales support with quick response</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 联系我们 -->
+    <section class="container" id="contact">
+        <h2 class="title">Contact Us</h2>
+        <div class="contact-wrap">
+            <div class="contact-left">
+                <h3>Contact Information</h3>
+                <div class="contact-list">
+                    <p><strong>Company Name:</strong> Dongying Erya Technology Co., Ltd.</p>
+                    <p><strong>Address:</strong> Dongying City, Shandong Province, China</p>
+                    <p><strong>Tel:</strong> +8618865656777</p>
+                    <p><strong>Email:</strong> shuwei0535@163.com</p>
+                    <p><strong>Business Scope:</strong> R&D, production and sales of pigments and pigment additives</p>
+                </div>
+            </div>
+            <div class="contact-right">
+                <h3>Business Cooperation</h3>
+                <p>Welcome customers from all walks of life to contact us and visit our factory for cooperation. We will achieve win-win results with high-quality products, competitive prices and comprehensive services.</p>
+                <br>
+                <p>We provide sample delivery, technical support and on-site guidance services.</p>
+            </div>
+        </div>
+    </section>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>© 2025 Dongying Erya Technology Co., Ltd. All Rights Reserved | Professional Manufacturer of Pigments & Additives</p>
+    </footer>
+    <!-- 移动端菜单交互 JS -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const navList = document.getElementById('navList');
+        // 点击展开/收起菜单
+        menuBtn.addEventListener('click', function(){
+            navList.classList.toggle('active');
+        });
+        // 点击导航链接自动关闭菜单
+        const navLinks = navList.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(){
+                navList.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
